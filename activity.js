@@ -8,7 +8,7 @@ class TimeEntry{
 	constructor( start_time, end_time, days, hours, minutes, seconds) {
         this.start_time = start_time;
         this.end_time = end_time;
-        this.total_time = end_time - start_time;
+        this.total_time = (end_time - start_time)/1000;
         this.days = days;
         this.hours = hours;
         this.minutes = minutes;
@@ -53,6 +53,7 @@ class Activity{
 	{
 		let time_list=[]
 		time_entries.forEach(function(item,index){
+			
 			time_list.push(item.serialise());
 		})
 
@@ -92,7 +93,7 @@ class ActivityList{
 		data["time_entries"].forEach((key,value)=>
 		{
 			return_list.push(
-				TimeEntry(
+				new TimeEntry(
 					start_time = dateutil.parse(key['start_time']),
                     end_time = dateutil.parse(key['end_time']),
                     days = entry['days'],
@@ -115,8 +116,8 @@ class ActivityList{
 	 activities_to_json()
 	{
 		let activity_=[];
-		this.time_entries.forEach((intem,index)=>{
-			activity_.push(activity.serialise());
+		this.activities.forEach((item,value)=>{
+			activity_.push(this.activity.serialise());
 		})
 
 		return activity_;
