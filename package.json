@@ -1,0 +1,19 @@
+{
+  "name": "apptracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "active-win": "^6.1.0",
+    "dateutil": "^0.1.0",
+    "fs": "0.0.1-security",
+    "meow": "^7.0.1",
+    "moment": "^2.26.0",
+    "strftime": "^0.10.0"
+  }
+}
