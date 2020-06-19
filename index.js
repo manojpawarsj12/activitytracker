@@ -56,7 +56,7 @@ async function getActive() {
 				activeList.activities.push(activity);
 			}
 		
-			jsonfile.writeFile(file, activeList.activities,{
+			jsonfile.writeFile(file, activeList,{
 				spaces: 4,
 			});
 
